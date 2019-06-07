@@ -1,0 +1,41 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+City.find_or_create_by(name: 'San Francisco')
+# Skill.find_or_create_by(name: 'Skill 1')
+# Skill.find_or_create_by(name: 'Skill 2')
+# Skill.find_or_create_by(name: 'Skill 3')
+# Skill.find_or_create_by(name: 'Skill 4')
+# Skill.find_or_create_by(name: 'Skill 5')
+# Department.find_or_create_by(name: 'Department 1')
+# Department.find_or_create_by(name: 'Department 2')
+# Department.find_or_create_by(name: 'Department 3')
+# Department.find_or_create_by(name: 'Department 4')
+# Department.find_or_create_by(name: 'Department 5')
+nurse = Nurse.create(name: 'Amit Pandey', age: 32, profile_link: 'http://amit.com')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 1')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 2')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 3')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 4')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 5')
+nurse.departments << Department.find_or_create_by(name: 'Department 1')
+nurse.departments << Department.find_or_create_by(name: 'Department 2')
+nurse.departments << Department.find_or_create_by(name: 'Department 3')
+nurse.departments << Department.find_or_create_by(name: 'Department 4')
+nurse.departments << Department.find_or_create_by(name: 'Department 5')
+
+
+nurse = Nurse.create(name: 'Amit Kumar', age: 22, profile_link: 'http://kumar.com')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 2')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 3')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 4')
+nurse.skills << Skill.find_or_create_by(name: 'Skill 5')
+nurse.departments << Department.find_or_create_by(name: 'Department 1')
+nurse.departments << Department.find_or_create_by(name: 'Department 2')
+nurse.departments << Department.find_or_create_by(name: 'Department 3')
+nurse.departments << Department.find_or_create_by(name: 'Department 4')
+nurse.departments << Department.find_or_create_by(name: 'Department 5')
