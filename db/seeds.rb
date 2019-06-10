@@ -39,3 +39,16 @@ nurse.departments << Department.find_or_create_by(name: 'Anaesthetics')
 nurse.departments << Department.find_or_create_by(name: 'Cardiology')
 nurse.departments << Department.find_or_create_by(name: 'Diagnostic')
 nurse.departments << Department.find_or_create_by(name: 'ICU')
+
+
+nurse = Nurse.create(name: 'Elizabeth', age: 28, profile_link: 'http://elizabeth.com', city_id: city.id)
+nurse.skills << Skill.find_or_create_by(name: 'Assistant')
+nurse.departments << Department.find_or_create_by(name: 'Cardiology')
+
+nurse = Nurse.create(name: 'Elliot', age: 28, profile_link: 'http://elliot.com', city_id: city.id)
+nurse.skills << Skill.find_or_create_by(name: 'Eldercare')
+nurse.departments << Department.find_or_create_by(name: 'Diagnostic')
+
+nurse = Nurse.create(name: 'Jessica', age: 25, profile_link: 'http://jessica.com', city_id: city.id)
+nurse.skills << Skill.find_or_create_by(name: 'Childcare')
+nurse.departments << Department.find_or_create_by(name: 'Ortho')
