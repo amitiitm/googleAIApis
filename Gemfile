@@ -13,6 +13,7 @@ gem 'pg'
 gem 'mysql2', '~> 0.3.18'
 gem 'rubocop'
 gem 'rubocop-rails'
+gem 'faker'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -46,7 +47,6 @@ group :development do
 end
 
 group :test do
-  gem 'faker'
   gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
