@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -28,7 +30,6 @@ nurse.departments << Department.find_or_create_by(name: 'Cardiology')
 nurse.departments << Department.find_or_create_by(name: 'Diagnostic')
 nurse.departments << Department.find_or_create_by(name: 'ICU')
 
-
 nurse = Nurse.create(name: 'Amit Kumar', age: 22, profile_link: 'http://kumar.com', city_id: city.id)
 nurse.skills << Skill.find_or_create_by(name: 'Assistant')
 nurse.skills << Skill.find_or_create_by(name: 'Home Nursing')
@@ -39,7 +40,6 @@ nurse.departments << Department.find_or_create_by(name: 'Anaesthetics')
 nurse.departments << Department.find_or_create_by(name: 'Cardiology')
 nurse.departments << Department.find_or_create_by(name: 'Diagnostic')
 nurse.departments << Department.find_or_create_by(name: 'ICU')
-
 
 nurse = Nurse.create(name: 'Elizabeth', age: 28, profile_link: 'http://elizabeth.com', city_id: city.id)
 nurse.skills << Skill.find_or_create_by(name: 'Assistant')
