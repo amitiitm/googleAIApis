@@ -11,4 +11,12 @@ namespace :populate_data do
 			nurse.departments << Department.find_or_create_by(name: Nurse::DEPARTMENTS.sample)
 		end
   end
+
+	desc 'Update Skills Name'
+  task update_skills: :environment do
+  	Skill.where(name: Nurse::SKILLS[0]).first.update_attributes(name: 'Peds Med-Surg')
+  	Skill.where(name: Nurse::SKILLS[1]).first.update_attributes(name: 'eClinical works')
+  	Skill.where(name: Nurse::SKILLS[2]).first.update_attributes(name: 'Critical Care')
+  	Skill.where(name: Nurse::SKILLS[3]).first.update_attributes(name: 'Care Evolution')
+  end
 end
