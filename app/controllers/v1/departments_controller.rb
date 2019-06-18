@@ -3,7 +3,7 @@
 module V1
   class DepartmentsController < ApplicationController
     def index
-      departments = Department.all
+      departments = Department.select(:id, :name)
       json_response(departments)
     end
   end

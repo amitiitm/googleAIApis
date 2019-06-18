@@ -3,7 +3,7 @@
 module V1
   class SkillsController < ApplicationController
     def index
-      skills = Skill.all
+      skills = Skill.select(:id, :name)
       json_response(skills)
     end
   end

@@ -4,7 +4,8 @@ module V1
   class NursesController < ApplicationController
     def index
       nurses = if verify_params(params)
-                 Nurse.joins(:skills, :departments).where(skills: { id: skill_ids(params) })
+                 Nurse.select(:id, :name, :age, :profile_link, :city_id)
+                      .joins(:skills, :departments).where(skills: { id: skill_ids(params) })
                       .where(departments: { id: department_ids(params) })
                       .where(city_id: params[:city_id]).distinct
                else
